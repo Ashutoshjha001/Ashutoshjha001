@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
+import Image from "next/image";
 
 function FeedbackCard({
 	index,
@@ -14,7 +15,7 @@ function FeedbackCard({
 	image
 }) {
 	return (
-		<motion.div
+		<motion.section
 			variants={fadeIn("", "spring", index * 0.5, 0.75)}
 			className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
 		>
@@ -34,15 +35,18 @@ function FeedbackCard({
 							{designation} of {company}
 						</p>
 					</div>
-
-					<img
-						src={image}
-						alt={`feedback_by-${name}`}
-						className="w-10 h-10 rounded-full object-cover"
-					/>
+					<div className="w-10 h-10 rounded-full object-cover">
+						<Image
+							src={image}
+							alt={`feedback_by-${name}`}
+							fill={true}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
+							className="rounded-full object-cover"
+						/>
+					</div>
 				</div>
 			</div>
-		</motion.div>
+		</motion.section>
 	);
 }
 

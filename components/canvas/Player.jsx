@@ -2,22 +2,22 @@ import {
 	OrbitControls,
 	PerspectiveCamera,
 	RandomizedLight,
-	View,
 	useAnimations,
 	useFBX,
 	useGLTF
 } from "@react-three/drei";
-import { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
+import * as THREE from "three";
+import { Canvas } from "@react-three/fiber";
+
 import CanvasLoader from "../Loader";
-import { useFrame } from "@react-three/fiber";
-import { Vector3 } from "three";
 import PlayerModel from "./models/PlayerModel";
 
-function Player({ playerref, isMobile }) {
+function Player({ isMobile }) {
 	const group = useRef();
 	const [animationsLoaded, setAnimationsLoaded] = useState(false);
 
-	const { nodes, materials, scene } = useGLTF("models/player/player.glb");
+	const { nodes, materials, scene } = useGLTF("models/player/player.gltf");
 	const { animations: waveAnimation } = useFBX(
 		"animations/standing-greeting.fbx"
 	);
@@ -43,7 +43,7 @@ function Player({ playerref, isMobile }) {
 	}, 2000);
 
 	return (
-		<View track={playerref}>
+		<>
 			<ambientLight intensity={1} />
 			<PerspectiveCamera
 				makeDefault
@@ -68,28 +68,44 @@ function Player({ playerref, isMobile }) {
 				position={[-1, 0.5, 1]}
 				color={"#804dee"}
 			/>
-			<OrbitControls
-				makeDefault
-				enableZoom={false}
-				maxPolarAngle={Math.PI / 2}
-				minPolarAngle={Math.PI / 2}
-				enableDamping={true}
-				dampingFactor={0.05}
-				enablePan={false}
-				autoRotate={false}
-			/>
+			{!isMobile && (
+				<OrbitControls
+					makeDefault
+					enableZoom={false}
+					maxPolarAngle={Math.PI / 2}
+					minPolarAngle={Math.PI / 2}
+					enableDamping={true}
+					dampingFactor={0.05}
+					enablePan={false}
+					autoRotate={false}
+				/>
+			)}
 			<Suspense fallback={<CanvasLoader />}>
 				<PlayerModel
 					nodes={nodes}
 					materials={materials}
 					rotation={[-1.6, 0, 0]}
-					position={[0, -1.6, 0]}
-					scale={2}
+					position={isMobile ? [0, -2.7, 0] : [0, -1.4, 0]}
+					scale={isMobile ? 3 : 2}
 					group={group}
 				/>
 			</Suspense>
-		</View>
+		</>
 	);
 }
 
-export default Player;
+function PlayerCanvas({ isMobile }) {
+	return (
+		<Canvas
+			dpr={[1, 2]}
+			gl={{
+				outputColorSpace: THREE.SRGBColorSpace,
+				alpha: true
+			}}
+		>
+			<Player isMobile={isMobile} />
+		</Canvas>
+	);
+}
+
+export default PlayerCanvas;

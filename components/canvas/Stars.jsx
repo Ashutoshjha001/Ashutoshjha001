@@ -1,14 +1,15 @@
-import { useState, useRef, Suspense } from "react";
+import { useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as THREE from "three";
+
 import CanvasLoader from "../Loader";
 
 function Stars(props) {
 	const ref = useRef();
 	const sphere = new Float32Array(5000 * 3);
 	for (let i = 0; i < sphere.length; i++) {
-		sphere[i] = (Math.random() - 0.5) * 2.4; // Adjust the range as needed
+		sphere[i] = (Math.random() - 0.5) * 2.4;
 	}
 
 	useFrame((state, delta) => {
@@ -44,9 +45,6 @@ function StarsCanvas() {
 				camera={{ position: [0, 0, 1] }}
 				dpr={[1, 2]}
 				gl={{
-					preserveDrawingBuffer: true,
-					antialias: true,
-					toneMappingExposure: 0.7,
 					outputColorSpace: THREE.SRGBColorSpace,
 					alpha: false
 				}}
@@ -54,7 +52,6 @@ function StarsCanvas() {
 				<Suspense fallback={<CanvasLoader />}>
 					<Stars />
 				</Suspense>
-
 				<Preload all />
 			</Canvas>
 		</div>

@@ -1,13 +1,12 @@
-import React, { forwardRef, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-// import { EarthCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { slideIn, staggerContainer } from "../utils/motion";
+import { slideIn } from "../utils/motion";
 
 function Contact() {
 	const formRef = useRef();
+
 	const [form, setForm] = useState({
 		name: "",
 		email: "",
@@ -26,16 +25,16 @@ function Contact() {
 
 		emailjs
 			.send(
-				"service_v24oiak",
-				"template_sqwax0b",
+				process.env.NEXT_PUBLIC_SERVICE_ID,
+				process.env.NEXT_PUBLIC_TEMPLATE_ID,
 				{
 					from_name: form.name,
-					to_name: "Ashutosh Jha",
+					to_name: "Shivam Sharma",
 					from_email: form.email,
-					to_email: "Ashutoshsharma77607@gmail.com",
+					to_email: "shivamsharma77607@gmail.com",
 					message: form.message
 				},
-				"ywtbnZ4k68zCCsf_2"
+				process.env.NEXT_PUBLIC_EMAILJS_KEY
 			)
 			.then(
 				() => {
@@ -64,11 +63,13 @@ function Contact() {
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true }}
-			className="xl:my-36 w-2/5 dark:bg-bgSecondaryDark bg-bgSecondaryLight ml-36 p-8 rounded-2xl"
+			className="xl:my-36 md:w-2/5 w-full bg-bgSecondaryDark xl:ml-36 lg:ml-16 md:ml-10 p-8 rounded-2xl shadow-sm shadow-primary"
 			id="contact"
 		>
-			<p className={"sectionSubText"}>Get in touch</p>
-			<h3 className={"sectionHeadText"}>Contact.</h3>
+			<p className={"sectionSubText text-ctnSecondaryDark"}>
+				Get in touch
+			</p>
+			<h3 className={"sectionHeadText text-ctnPrimaryDark"}>Contact.</h3>
 
 			<form
 				ref={formRef}
@@ -76,7 +77,7 @@ function Contact() {
 				className="mt-8 flex flex-col gap-8"
 			>
 				<label className="flex flex-col">
-					<span className="dark:text-ctnPrimaryDark text-ctnPrimaryLight font-medium mb-4">
+					<span className="text-ctnPrimaryDark font-medium mb-4">
 						Your Name
 					</span>
 					<input
@@ -86,11 +87,11 @@ function Contact() {
 						onChange={handleChange}
 						required
 						placeholder="What's your good name?"
-						className="dark:bg-bgPrimaryDark bg-bgPrimaryLight py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight rounded-lg outline-none border-none font-medium dark:text-ctnPrimaryDark text-ctnPrimaryLight"
+						className="bg-bgPrimaryDark py-4 px-6 placeholder:text-ctnSecondaryDark rounded-lg outline-none border-none font-medium text-ctnPrimaryDark  placeholder:text-sm md:placeholder:text-lg h-fit placeholder:break-words break-words"
 					/>
 				</label>
 				<label className="flex flex-col">
-					<span className="dark:text-ctnPrimaryDark text-ctnPrimaryLight font-medium mb-4">
+					<span className="text-ctnPrimaryDark  font-medium mb-4">
 						Your email
 					</span>
 					<input
@@ -100,11 +101,11 @@ function Contact() {
 						onChange={handleChange}
 						required
 						placeholder="What's your web address?"
-						className="dark:bg-bgPrimaryDark bg-bgPrimaryLight py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight rounded-lg outline-none border-none font-medium dark:text-ctnPrimaryDark text-ctnPrimaryLight"
+						className="bg-bgPrimaryDark py-4 px-6 placeholder:text-ctnSecondaryDark rounded-lg outline-none border-none font-medium text-ctnPrimaryDark  placeholder:text-sm md:placeholder:text-lg h-fit placeholder:break-words break-words"
 					/>
 				</label>
 				<label className="flex flex-col">
-					<span className="dark:text-ctnPrimaryDark text-ctnPrimaryLight font-medium mb-4">
+					<span className="text-ctnPrimaryDark  font-medium mb-4">
 						Your Message
 					</span>
 					<textarea
@@ -114,7 +115,7 @@ function Contact() {
 						onChange={handleChange}
 						required
 						placeholder="What you want to say?"
-						className="dark:bg-bgPrimaryDark bg-bgPrimaryLight py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight rounded-lg outline-none border-none font-medium dark:text-ctnPrimaryDark text-ctnPrimaryLight"
+						className="bg-bgPrimaryDark py-4 px-6 placeholder:text-ctnSecondaryDark rounded-lg outline-none border-none font-medium text-ctnPrimaryDark  placeholder:text-sm md:placeholder:text-lg h-fit placeholder:break-words break-words"
 					/>
 				</label>
 

@@ -26,7 +26,7 @@ export function PreLoader() {
 			for (let i = 0; i < 100; i++) {
 				setTimeout(() => {
 					setProgress(i);
-				}, 46 * i);
+				}, 30 * i);
 			}
 		};
 
@@ -34,8 +34,8 @@ export function PreLoader() {
 	}, []);
 
 	return (
-		<div className="w-screen h-screen overflow-hidden bg-bgPrimaryLight dark:bg-bgPrimaryDark z-40 fixed top-0 left-0 flex flex-col justify-center items-center gap-8">
-			<div className="loader w-[150px] h-[150px]">
+		<div className="w-[100svw] h-[100svh] overflow-hidden bg-bgPrimaryLight dark:bg-bgPrimaryDark z-40 fixed top-0 left-0 flex flex-col justify-center items-center gap-8">
+			<div className="loader md:w-[150px] md:h-[150px] w-[100px] h-[100px]">
 				<div className="loader_cube loader_cube--color"></div>
 				<div className="loader_cube loader_cube--glowing"></div>
 				<span className="loader-span"></span>
