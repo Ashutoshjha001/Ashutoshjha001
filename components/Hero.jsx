@@ -24,7 +24,7 @@ function Hero({ computerref, loading }) {
 					<h1 className={`heroHeadText`}>
 						Hi, I&apos;m{" "}
 						<span className="dark:text-five text-primary">
-							Shivam
+							Ashutosh
 						</span>
 					</h1>
 					<p className={`heroSubText mt-2 tracking-wide`}>
@@ -32,7 +32,7 @@ function Hero({ computerref, loading }) {
 							sequence={[
 								"React/Next.js developer",
 								500,
-								"Frontend developer",
+								"Software Developer",
 								500,
 								"Tech Team Lead at GDSC MVJCE",
 								500

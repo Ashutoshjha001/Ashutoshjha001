@@ -32,10 +32,10 @@ const Navbar = () => {
 						/>
 					</div>
 					<p className="dark:text-ctnPrimaryDark text-ctnPrimaryLight text-[18px] font-bold cursor-pointer flex ">
-						Shivam Sharma &nbsp;
+						Ashutosh Jha &nbsp;
 						<span className="sm:block hidden">
 							{" "}
-							| Frontend Developer
+							| Software Developer
 						</span>
 					</p>
 				</Link>

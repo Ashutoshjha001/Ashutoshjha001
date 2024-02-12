@@ -10,34 +10,23 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				// primary: "#00ff00",
-				// secondary: "#00b300",
-				// tertiary: "#bfffbf",
-				// quaternary: "#80ff80",
+				primary: "#2a69ac",       // Deep Blue
+				secondary: "#5e4c7b",     // Purple
+				tertiary: "#af65a1",      // Lavender
+				quaternary: "#336699",    // Royal Blue
+				five: "#c1a5c1",          // Pale Lavender
 
-				primary: "#804dee",
-				secondary: "#4b42a7",
-				tertiary: "#9b4dee",
-				quaternary: "#4d9aee",
-				five: "#cbb8f5",
+				bgPrimaryLight: "#f8f8f8", // Light Gray
+				bgSecondaryLight: "#e0eaf0", // Light Blue-Gray
+				ctnPrimaryLight: "#394956", // Dark Slate Gray
+				ctnSecondaryLight: "#9caab4", // Slate Gray
 
-				bgPrimaryLight: "#ffffff",
-				bgSecondaryLight: "#e0eaf0",
-				ctnPrimaryLight: "#2e384d",
-				ctnSecondaryLight: "#8c9db1",
+				ctnPrimaryDark: "#333333", // Dark Gray
+				ctnSecondaryDark: "#6c7b8b", // Blue-Gray
 
-				// bgPrimaryDark: "#181826",
-				// bgSecondaryDark: "#212134",
-				ctnPrimaryDark: "#e5e6e9",
-				ctnSecondaryDark: "#7e8c9f",
-
-				// primary: "#050816",
-				// secondary: "#aaa6c3",
-				// tertiary: "#151030",
-				// #181826, #212134
-				"black-100": "#100d25",
-				"black-200": "#090325",
-				"white-100": "#f3f3f3"
+				black100: "#100d25",       // Dark Indigo
+				black200: "#090325",       // Dark Purple
+				white100: "#f3f3f3"        // Light Gray
 			},
 			boxShadow: {
 				card: "0px 35px 120px -15px #211e35"

@@ -56,7 +56,7 @@ const About = () => {
 				className="mt-4 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[17px] w-full leading-[30px] flex flex-col justify-between gap-4"
 			>
 				<div>
-					Hello! I&apos;m Shivam Sharma, a passionate web developer
+					Hello! I&apos;m Ashutosh Jha, a passionate web developer
 					and problem solver. Currently, I&apos;m the Tech Team Lead
 					at GDSC MVJCE, and I&apos;m pursuing a B.E. degree in
 					Computer Science and Engineering at MVJ College Of
@@ -72,13 +72,13 @@ const About = () => {
 				</div>
 				<div>
 					<Link
-						href="mailto:shivamsharma77607@gmail.com"
+						href="mailto:Ashutoshsharma77607@gmail.com"
 						target="_blank"
 						rel="noreferrer"
 						className="hover:text-primary transition-all duration-100 ease-in flex items-center gap-2"
 					>
 						<EmailIcon className="w-[30px] h-[30px]" />
-						&nbsp;shivamsharma77607@gmail.com
+						&nbsp;Ashutoshsharma77607@gmail.com
 					</Link>
 				</div>
 				<div className="flex gap-5 items-center">
@@ -94,7 +94,7 @@ const About = () => {
 					))}
 				</div>
 				<Link
-					href="document/shivam-resume.pdf"
+					href="document/Ashutosh-resume.pdf"
 					target="_blank"
 					rel="noreferrer"
 					className="w-fit"

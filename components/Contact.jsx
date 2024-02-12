@@ -30,9 +30,9 @@ function Contact() {
 				"template_sqwax0b",
 				{
 					from_name: form.name,
-					to_name: "Shivam Sharma",
+					to_name: "Ashutosh Jha",
 					from_email: form.email,
-					to_email: "shivamsharma77607@gmail.com",
+					to_email: "Ashutoshsharma77607@gmail.com",
 					message: form.message
 				},
 				"ywtbnZ4k68zCCsf_2"

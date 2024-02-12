@@ -27,7 +27,7 @@ const services = [
 	// 	icon: web
 	// },
 	{
-		title: "Frontend Developer",
+		title: "Software Developer",
 		icon: <FrontendIcon />
 	},
 	{
@@ -138,7 +138,7 @@ const technologies = [
 
 const experiences = [
 	{
-		title: "Frontend Developer",
+		title: "Software Developer",
 		company_name: "Tech Lead at GDSC MVJCE",
 		icon: "/assets/company/gdsc-logo.svg",
 		iconBg: "#E6DEDD",
@@ -151,7 +151,7 @@ const experiences = [
 		]
 	},
 	{
-		title: "Frontend Developer",
+		title: "Software Developer",
 		company_name: "Tech team member at GDSC MVJCE",
 		icon: "/assets/company/gdsc-logo.svg",
 		iconBg: "#E6DEDD",
@@ -217,7 +217,7 @@ const projects = [
 		],
 		image: "/assets/projects/netflix-clone.png",
 		source_code_link:
-			"https://github.com/Shivam-Sharma-1/Netflix-Clone.git",
+			"https://github.com/Ashutosh-Sharma-1/Netflix-Clone.git",
 		deployed_link: "https://netflix-clone12345.vercel.app"
 	},
 	{
@@ -239,7 +239,7 @@ const projects = [
 			}
 		],
 		image: "/assets/projects/vanlife.png",
-		source_code_link: "https://github.com/Shivam-Sharma-1/Van-Life.git",
+		source_code_link: "https://github.com/Ashutosh-Sharma-1/Van-Life.git",
 		deployed_link: "https://myvanlife.netlify.app"
 	},
 	{
@@ -261,8 +261,8 @@ const projects = [
 			}
 		],
 		image: "/assets/projects/spooky-run.png",
-		source_code_link: "https://github.com/Shivam-Sharma-1/Spooky-Run.git",
-		deployed_link: "https://shivam-sharma-1.github.io/Spooky-Run"
+		source_code_link: "https://github.com/Ashutosh-Sharma-1/Spooky-Run.git",
+		deployed_link: "https://Ashutosh-sharma-1.github.io/Spooky-Run"
 	}
 ];
 
@@ -270,22 +270,22 @@ const socials = [
 	{
 		id: "github",
 		icon: <GithubIcon />,
-		link: "https://github.com/Shivam-Sharma-1"
+		link: "https://github.com/Ashutosh-Sharma-1"
 	},
 	{
 		id: "linkedin",
 		icon: <LinkedInIcon />,
-		link: "https://www.linkedin.com/in/shivamsharma77607"
+		link: "https://www.linkedin.com/in/Ashutoshsharma77607"
 	},
 	{
 		id: "x",
 		icon: <XIcon />,
-		link: "https://twitter.com/Shivam_1_Sharma"
+		link: "https://twitter.com/Ashutosh_1_Sharma"
 	},
 	{
 		id: "instagram",
 		icon: <InstagramIcon />,
-		link: "https://www.instagram.com/_.shivam._.here._"
+		link: "https://www.instagram.com/_.Ashutosh._.here._"
 	}
 ];
 
