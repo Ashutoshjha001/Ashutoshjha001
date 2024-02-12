@@ -26,7 +26,7 @@ function Hero({ loading, isMobile }) {
 					<h1 className={`heroHeadText`}>
 						Hi, I&apos;m{" "}
 						<span className="dark:text-five text-primary">
-							Shivam
+							Ashutosh
 						</span>
 					</h1>
 					<p className={`heroSubText mt-2 tracking-wide`}>

@@ -29,9 +29,9 @@ function Contact() {
 				process.env.NEXT_PUBLIC_TEMPLATE_ID,
 				{
 					from_name: form.name,
-					to_name: "Shivam Sharma",
+					to_name: "Ashutosh Jha",
 					from_email: form.email,
-					to_email: "shivamsharma77607@gmail.com",
+					to_email: "ashutoshsharma77607@gmail.com",
 					message: form.message
 				},
 				process.env.NEXT_PUBLIC_EMAILJS_KEY
