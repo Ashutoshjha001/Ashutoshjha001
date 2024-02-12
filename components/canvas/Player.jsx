@@ -47,7 +47,7 @@ function Player({ isMobile }) {
 			<ambientLight intensity={1} />
 			<PerspectiveCamera
 				makeDefault
-				position={[0, 0, 12]}
+				position={[0, 0, 16]}
 				fov={30}
 				near={0.8}
 				far={120}

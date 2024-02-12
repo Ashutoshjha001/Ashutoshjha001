@@ -75,13 +75,13 @@ function About() {
 				</div>
 				<div className="w-fit break-words">
 					<Link
-						href="mailto:ashutoshsharma77607@gmail.com"
+						href="mailto:shivamsharma77607@gmail.com"
 						target="_blank"
 						rel="noreferrer"
 						className="hover:text-primary w-full transition-all duration-100 ease-in flex md:items-center gap-2 md:flex-row flex-wrap word-break"
 					>
 						<EmailIcon className="w-[30px] h-[30px]" />
-						ashutoshsharma77607@gmail.com
+						shivamsharma77607@gmail.com
 					</Link>
 				</div>
 				<div className="flex gap-5 items-center">

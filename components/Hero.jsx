@@ -34,7 +34,7 @@ function Hero({ loading, isMobile }) {
 							sequence={[
 								"React/Next.js developer",
 								500,
-								"Frontend developer",
+								"Software Developer",
 								500,
 								"Tech Team Lead at GDSC MVJCE",
 								500

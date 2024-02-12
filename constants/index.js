@@ -31,7 +31,7 @@ const services = [
 	// 	icon: web
 	// },
 	{
-		title: "Frontend Developer",
+		title: "Software Developer",
 		icon: <FrontendIcon />
 	},
 	{
@@ -181,7 +181,7 @@ const technologies = {
 
 const experiences = [
 	{
-		title: "Frontend Developer",
+		title: "Software Developer",
 		company_name: "Tech Lead at GDSC MVJCE",
 		icon: "/assets/company/gdsc-logo.svg",
 		iconBg: "#E6DEDD",
@@ -194,7 +194,7 @@ const experiences = [
 		]
 	},
 	{
-		title: "Frontend Developer",
+		title: "Software Developer",
 		company_name: "Tech team member at GDSC MVJCE",
 		icon: "/assets/company/gdsc-logo.svg",
 		iconBg: "#E6DEDD",
